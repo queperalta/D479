@@ -36,7 +36,7 @@ export default function HeroSection() {
       className="hero min-h-screen text-white transition-all duration-700 ease-in-out"
       style={bgStyle}
     >
-      <div className="hero-overlay bg-black bg-opacity-60" />
+      <div className="hero-overlay bg-black bg-opacity-20" />
       <div className="hero-content text-center">
         <div className="max-w-md">
           <h1 className="text-5xl font-bold">Welcome to Taniti</h1>
