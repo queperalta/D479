@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-base-200 text-base-content py-10 mt-16">
+    <footer id="contact" className="bg-base-200 text-base-content py-40 sm:py-10 mt-16">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
 
         {/* About / Legal */}
@@ -28,7 +28,11 @@ export default function Footer() {
           <h3 className="text-xl font-bold mb-2">Contact Us</h3>
           <p>Email: <a href="mailto:info@visittaniti.com" className="link">info@visittaniti.com</a></p>
           <p>Phone: +1 (800) 555-TANI</p>
-          <p>Address: Yellow Leaf Bay, Taniti Island</p>
+          <p>
+            Address: Yellow Leaf Bay Visitor Center,<br />
+            125 Seaside Boulevard,<br />
+            Taniti City, Taniti Island 98765
+          </p>
         </div>
 
       </div>

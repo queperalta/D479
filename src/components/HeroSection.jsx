@@ -49,7 +49,7 @@ export default function HeroSection() {
           <p className="py-6 text-lg">
             Eco-adventures, island beauty, and unforgettable experiences.
           </p>
-          <a href="#plan" className="btn btn-primary text-lg">
+          <a href="/book" className="btn btn-primary text-lg">
             Plan Your Trip Today
           </a>
         </div>

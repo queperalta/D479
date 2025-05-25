@@ -39,10 +39,11 @@ export default function LodgingSection() {
         <div className="max-w-4xl mx-auto text-left">
           <h2 className="text-4xl font-bold mb-8 text-center">Lodging</h2>
 
-          <div data-aos="fade-up" className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6">
             {cards.map((card, index) => (
               <div
                 key={index}
+                data-aos="fade-up"
                 className="bg-white/80 text-gray-800 rounded-lg shadow p-6 transition-all duration-500 ease-in-out cursor-pointer"
                 onClick={() => setActiveIndex(activeIndex === index ? null : index)}
               >
@@ -67,7 +68,7 @@ export default function LodgingSection() {
 
           {/* CTA */}
           <div className="mt-12 text-center">
-            <a href="#book" className="btn btn-primary text-lg">
+            <a href="/book" className="btn btn-primary text-lg">
               Book Now
             </a>
           </div>
