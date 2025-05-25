@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
-import HeroSection from '../components/HeroSection.jsx';
 import welcomeToTaniti from '../assets/welcome_to_taniti.png';
+import HeroSection from '../components/HeroSection.jsx';
+import LodgingSection from '../components/LodgingSection.jsx';
+import RestaurantSection from '../components/RestaurantSection.jsx';
 import ScrollToTopButton from '../components/ScrollToTopButton';
 import Footer from '../components/Footer';
 
@@ -12,7 +14,7 @@ export default function Home() {
     <div className="bg-white min-h-screen">
       {/* Navbar */}
       <Header />
-      <div className="snap-y snap-mandatory h-screen overflow-y-scroll md:overflow-visible md:snap-none">
+      <div className="h-screen overflow-y-scroll snap-y snap-mandatory md:snap-none md:overflow-visible">
         {/* Hero Section */}
         <HeroSection />
 
@@ -38,41 +40,19 @@ export default function Home() {
                 Escape the ordinary and reconnect with nature on the island of Taniti — where eco-adventure meets cultural authenticity. Hike rainforest trails to hidden waterfalls, snorkel vibrant reefs teeming with marine life, or witness the raw power of our active volcano. Support local businesses, explore native architecture, and savor fresh island cuisine — all while treading lightly and traveling sustainably.
               </p>
               <br/>
-              <a href="#tours" className="btn btn-outline mt-2 ml-2">View Top Attractions</a>
+              <a href="#lodging" className="btn btn-outline mt-2 ml-2">Make Your Stay Memorable</a>
+              <a href="#tours" className="btn btn-outline mt-2 ml-2">Explore Taniti's Wild Side</a>
+              <a href="#restaurants" className="btn btn-outline mt-2 ml-2">Taste the Island’s Roots</a>
             </div>
           </div>
         </section>
 
 
         {/* Lodging Section */}
-        <section
-          id="lodging"
-          className="min-h-screen py-20 px-6 bg-white text-gray-800 flex items-center"
-        >
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <h2 className="text-3xl font-bold mb-6 text-center">Lodging</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="card bg-white shadow p-4">Affordable Hostels & BnBs</div>
-              <div className="card bg-white shadow p-4">Family-Owned Hotels</div>
-              <div className="card bg-white shadow p-4">Luxury 4-Star Resort</div>
-            </div>
-          </div>
-        </section>
+        <LodgingSection />
 
         {/* Restaurants Section */}
-        <section
-          id="restaurants"
-          className="min-h-screen py-20 px-6 bg-white text-gray-800 flex items-center"
-        >
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <h2 className="text-3xl font-bold mb-6 text-center">Restaurants</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="card bg-white shadow p-4">Local Fish & Rice</div>
-              <div className="card bg-white shadow p-4">American Cuisine</div>
-              <div className="card bg-white shadow p-4">Pan-Asian Flavors</div>
-            </div>
-          </div>
-        </section>
+        <RestaurantSection />
 
         {/* Tours Section */}
         <section

@@ -20,6 +20,7 @@ export default function Header() {
         <a href="#restaurants" className="px-3 py-2 hover:text-primary font-medium">Restaurants</a>
         <a href="#tours" className="px-3 py-2 hover:text-primary font-medium">Tours</a>
         <a href="#transport" className="px-3 py-2 hover:text-primary font-medium">Transport</a>
+        <a href="#contact" className="px-3 py-2 hover:text-primary font-medium">Contact Us</a>
       </div>
 
       <div className="dropdown dropdown-end md:hidden">

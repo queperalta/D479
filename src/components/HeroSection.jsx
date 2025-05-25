@@ -18,12 +18,18 @@ export default function HeroSection() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 4000); // 3 seconds
+      const nextIndex = (currentIndex + 1) % heroImages.length;
+      const img = new Image();
+      img.src = heroImages[nextIndex];
+
+      img.onload = () => {
+        setCurrentIndex(nextIndex);
+      };
+    }, 4000);
+
     return () => clearInterval(interval);
-  }, []);
+  }, [currentIndex]);
+
 
   const bgStyle = {
     backgroundImage: `url(${heroImages[currentIndex]})`,

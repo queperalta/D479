@@ -17,6 +17,10 @@ export default {
       animation: {
         'fade-in': 'fade-in 0.3s ease-out',
       },
+      fontFamily: {
+        island: ['Quicksand', 'sans-serif'],
+        script: ['Pacifico', 'cursive'],
+      },
     },
   },
   plugins: [daisyui],
