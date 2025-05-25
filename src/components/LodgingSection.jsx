@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import lodgingImage from "../assets/lodging.png";
 import hostelImg from "../assets/hostel.png";
 import familyImg from "../assets/family.png";
@@ -6,6 +7,7 @@ import resortImg from "../assets/resort.png";
 import { BedDouble, Home, Hotel } from "lucide-react";
 
 export default function LodgingSection() {
+  const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(null);
 
   const cards = [
@@ -68,7 +70,7 @@ export default function LodgingSection() {
 
           {/* CTA */}
           <div className="mt-12 text-center">
-            <a href="/book" className="btn btn-primary text-lg">
+            <a onClick={() => navigate("/book")} className="btn btn-primary text-lg">
               Book Now
             </a>
           </div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import taniti from "../assets/taniti.png";
 import taniti2 from "../assets/taniti2.png";
 import taniti3 from "../assets/taniti3.png";
@@ -15,6 +16,7 @@ const heroImages = [
 
 export default function HeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -49,7 +51,7 @@ export default function HeroSection() {
           <p className="py-6 text-lg">
             Eco-adventures, island beauty, and unforgettable experiences.
           </p>
-          <a href="/book" className="btn btn-primary text-lg">
+          <a onClick={() => navigate("/book")} className="btn btn-primary text-lg">
             Plan Your Trip Today
           </a>
         </div>

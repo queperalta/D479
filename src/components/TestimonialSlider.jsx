@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const testimonials = [
   {
@@ -42,6 +43,7 @@ const testimonials = [
 
 export default function TestimonialSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();
 
     useEffect(() => {
       const timer = setInterval(() => {
@@ -63,7 +65,7 @@ export default function TestimonialSlider() {
         <h2 className="text-3xl font-bold mb-2">Build Your Adventure</h2>
         <p className="text-gray-600 text-lg mb-4">Choose your tour, pack your bags, and start exploring.</p>
         <a
-          href="/book"
+          onClick={() => navigate("/book")}
           className="inline-block bg-primary text-white px-6 py-3 rounded-full shadow hover:bg-primary/90 transition-colors duration-300 text-lg font-semibold"
         >
           Book Your Tour

@@ -1,6 +1,9 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
+import { CalendarCheck } from 'lucide-react';
 
 export default function Footer() {
+  const navigate = useNavigate();
   return (
     <footer id="contact" className="bg-base-200 text-base-content py-40 sm:py-10 mt-16">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -9,6 +12,12 @@ export default function Footer() {
         <div>
           <h3 className="text-xl font-bold mb-2">About Taniti</h3>
           <p>Taniti is a small island paradise in the Pacific Ocean. Known for its eco-tourism, cultural depth, and stunning biodiversity, it's your next unforgettable destination.</p>
+          <a
+            onClick={() => navigate("/book")}
+            className="btn btn-primary w-full text-white text-lg flex justify-center items-center gap-2"
+          >
+            <CalendarCheck size={18} /> Book Now
+          </a>
           <p className="mt-4 text-sm text-gray-500">© 2025 Taniti Tourism Board. All rights reserved.</p>
         </div>
 

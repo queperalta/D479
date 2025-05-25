@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 import logo from '../assets/logo.svg';
 import {
   Home,
@@ -10,6 +11,8 @@ import {
 } from 'lucide-react';
 
 export default function Header({ hideBookNow = false }) {
+  const navigate = useNavigate();
+
   return (
     <div className="navbar bg-white/80 backdrop-blur-md text-gray-800 shadow-md sticky top-0 z-50">
       <div className="flex-1">
@@ -24,14 +27,14 @@ export default function Header({ hideBookNow = false }) {
       </div>
 
       <div className="flex-none hidden md:flex gap-2">
-        <a href="#lodging" className="px-3 py-2 hover:text-primary font-medium">Lodging</a>
-        <a href="#restaurants" className="px-3 py-2 hover:text-primary font-medium">Restaurants</a>
-        <a href="#tours" className="px-3 py-2 hover:text-primary font-medium">Tours</a>
-        <a href="#transport" className="px-3 py-2 hover:text-primary font-medium">Transport</a>
-        <a href="#contact" className="px-3 py-2 hover:text-primary font-medium">Contact Us</a>
+        <a href="/#lodging" className="px-3 py-2 hover:text-primary font-medium">Lodging</a>
+        <a href="/#restaurants" className="px-3 py-2 hover:text-primary font-medium">Restaurants</a>
+        <a href="/#tours" className="px-3 py-2 hover:text-primary font-medium">Tours</a>
+        <a href="/#transport" className="px-3 py-2 hover:text-primary font-medium">Transport</a>
+        <a href="/#contact" className="px-3 py-2 hover:text-primary font-medium">Contact Us</a>
         {!hideBookNow && (
           <a
-            href="/book"
+            onClick={() => navigate("/book")}
             className="btn btn-primary ml-4 text-white px-5"
           >
             Book Now
@@ -75,7 +78,7 @@ export default function Header({ hideBookNow = false }) {
           {!hideBookNow && (
             <li className="pt-2">
               <a
-                href="/book"
+                onClick={() => navigate("/book")}
                 className="btn btn-primary w-full text-white text-lg flex justify-center items-center gap-2"
               >
                 <CalendarCheck size={18} /> Book Now
